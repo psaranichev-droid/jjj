@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════
+   ONLOOK — Design System
+   ═══════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    --font-rubik: "Rubik", system-ui, -apple-system, sans-serif;
+    --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    line-height: 1.625;
+    color: #1e293b;
+    background-color: #fff;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-rubik);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+  }
+
+  p { margin-bottom: 1em; }
+  p:last-child { margin-bottom: 0; }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  button { font-family: var(--font-inter); cursor: pointer; }
+  input, textarea, select { font-family: var(--font-inter); font-size: 1rem; }
+  input::placeholder, textarea::placeholder { color: #94a3b8; }
+  img { max-width: 100%; height: auto; display: block; }
+  ul, ol { list-style: none; padding: 0; margin: 0; }
+  strong, b { font-weight: 600; }
+
+  ::selection {
+    background-color: rgba(79, 70, 229, 0.15);
+    color: #312e81;
+  }
+
+  :focus-visible { outline: none; }
+  *:focus { outline: none; }
+}
+
+@layer utilities {
+  .font-rubik { font-family: var(--font-rubik); }
+  .font-inter { font-family: var(--font-inter); }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+}
